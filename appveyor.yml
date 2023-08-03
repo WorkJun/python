@@ -1,0 +1,8 @@
+version: 1.0.{build}
+image: macOS-Catalina
+configuration: Release
+platform: Any CPU
+before_build:
+- cmd: pyinstaller -F export_excel.py devConfig.py prdConfig.py -n 导出投料卡
+build:
+  verbosity: minimal
